@@ -60,7 +60,13 @@ class App extends Component {
         }));
       })
       .catch((error) => this.setState({ error: "Picture not found" }))
-      .finally(() => this.setState({ isLoading: false }));
+      .finally(() => {
+        window.scrollTo({
+          top: document.documentElement.scrollHeight,
+          behavior: "smooth",
+        });
+        this.setState({ isLoading: false });
+      });
   };
 
   onChangequery = (query) => {
