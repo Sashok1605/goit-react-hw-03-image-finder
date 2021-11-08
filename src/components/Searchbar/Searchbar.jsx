@@ -22,6 +22,7 @@ class SearchForm extends Component {
           <input
             className="SearchForm-input"
             type="text"
+            value={this.state.query}
             autoComplete="off"
             autoFocus
             placeholder="Search images and photos"
